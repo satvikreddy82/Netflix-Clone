@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+.main .box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.7;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+.main {
+  background-image: url("assets/img/hero\ photo.jpg");
+  height: 70vh;
+  position: relative;
+  background-position: center center;
+  background-size: max(1000px, 100vw);
+  background-repeat: no-repeat;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 65vw;
+  margin: auto;
+  align-items: center;
+  height: 62px;
+}
+nav img {
+  position: relative;
+  z-index: 10;
+}
+nav button {
+  position: relative;
+  z-index: 10;
+}
+.hero {
+  font-family: "Martel Sans", sans-serif;
+  height: calc(100% - 62px);
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 23px;
+  padding: 0 30px;
+}
+.hero > :first-child {
+  font-weight: 900;
+  font-size: 48px;
+  text-align: center;
+}
+.hero > :nth-child(2) {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.hero > :nth-child(3) {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+body {
+  background-color: black;
+  font-family: "Martel Sans", sans-serif;
+}
+.separation {
+  height: 7px;
+  background-color: rgb(46, 44, 44);
+}
+.btn {
+  padding: 3px 8px;
+  font-weight:700;
+  background-color: rgba(214, 204, 204, 0);
+  font-family: "Martel Sans", sans-serif;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  gap: 8px; 
+  cursor: pointer;
+}
+.language-select select {
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.55);
+  background-image: linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%);
+  background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font: 700 14px "Martel Sans", sans-serif;
+  margin-right: 8px;
+  padding: 5px 28px 5px 10px;
+}
+.language-select {
+  position: relative;
+  z-index: 10;
+}
+.language-select option {
+  background-color: #222;
+  color: white;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.btn-red {
+  box-sizing: border-box;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  width: 190px;
+  height: 56px;
+  padding: 4px 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+  
+}
+.btn-red-sm {
+  background-color: red;
+  color: white;
+}
+.hero-buttons input {
+  box-sizing: border-box;
+  width: 380px;
+  height: 56px;
+  border-radius: 4px;
+  padding: 9px 14px;
+  font-size: 16px;
+  background-color: rgba(23, 23, 23, 0.2);
+  color: white;
+  border: 0.5px solid rgba(246, 238, 238, 0.2);
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.hero-buttons ::placeholder {
+  font-size: 16px;
+}
+.first{
+  display: flex;
+  justify-content: center;
+  max-width: 90vw;
+  margin: auto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.secImg{
+  position: relative;
+  width: 45vw;
+  max-width: 800px;
+}
+.secImg img{
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+.secImg video{
+  position: absolute;
+  top: 9%;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.first > div > span:first-child {
+  font-size: 48px;
+}
+.first > div > span:last-child {
+  font-size: 30px;
+}
+.faq{
+  color: white;
+  padding: 34px;
+  background-color: black;
+  font-size: 24px;
+   font-family: "Martel Sans", sans-serif;
+}
+.faq h2{
+  text-align: center;
+  font-size: 48px;  
+   font-family: "Martel Sans", sans-serif;
+}
+.faqbox svg{
+  filter: invert(1);
+  transition: transform 0.25s ease;
+}
+.faqbox{
+  display: flex;
+  background-color: rgba(54, 52, 52, 0.409);
+  padding: 24px;
+  width: 100%;
+  max-width: 60vw;
+  margin: 34px auto;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+.faqbox:hover,
+.faqbox:focus-within {
+  background-color: rgb(75, 75, 75);
+  transform: translateY(-2px);
+}
+.faqbox:hover svg,
+.faqbox:focus-within svg {
+  transform: rotate(90deg);
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  max-width: 80vw;
+  color: white;
+}
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding: 34px;
+ 
+}
+footer a{
+  color: white;
+
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 80vh;
+  }
+
+  .main .box {
+    height: 80vh;
+  }
+
+  nav {
+    max-width: none;
+    padding: 0 20px;
+  }
+
+  nav img {
+    width: 90px;
+  }
+
+  .hero > :first-child,
+  .faq h2,
+  .first > div > span:first-child {
+    font-size: 30px;
+  }
+
+  .hero > :nth-child(2),
+  .hero > :nth-child(3),
+  .first > div > span:last-child {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-buttons input,
+  .btn-red {
+    box-sizing: border-box;
+    width: min(100%, 360px);
+  }
+
+  .first {
+    flex-direction: column;
+    max-width: 90vw;
+    padding: 45px 0;
+    text-align: center;
+  }
+
+  .second {
+    flex-direction: column-reverse;
+  }
+
+  .secImg img {
+    width: 100%;
+  }
+
+  .secImg {
+    width: 80vw;
+    max-width: 600px;
+  }
+
+  .faq {
+    padding: 34px 10px;
+  }
+
+  .faqbox {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 15px auto;
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    max-width: 95vw;
+  }
+
+  .footer-item {
+    gap: 16px;
+    padding: 24px 15px;
+  }
+}
+.lastmail{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 120px 20px;
+}
+.lastmail .hero-buttons {
+  margin-top: 20px;
+}
