@@ -1,6 +1,7 @@
 # Netflix Clone
 
 A responsive, high-fidelity Netflix landing page clone built with pure HTML5 and CSS3.
+Live🔗: https://satvikreddy82.github.io/Netflix-Clone/
 
 ---
 
@@ -79,4 +80,4 @@ A responsive, high-fidelity Netflix landing page clone built with pure HTML5 and
      python -m http.server 8000
      ```
 
-No external build tools, package managers, or dependencies are required.
+No external build tools, package managers, or dependencies are required.
