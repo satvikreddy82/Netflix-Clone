@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Educational frontend clone of the Netflix landing page built for learning and portfolio demonstration only. Not affiliated with Netflix."
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Netflix India – Watch Shows Online, Watch Movies Online</title>
+    <title>Netflix Clone – Educational Portfolio Project</title>
     <link
       rel="shortcut icon"
       href="assets/img/favicon.ico"
@@ -12,6 +17,14 @@
     />
   </head>
   <body>
+    <div class="demo-banner" role="alert">
+      <span>
+        ⚠️ <strong>Educational Portfolio Project:</strong> This website is an
+        independent frontend clone built for educational purposes only. It is
+        <strong>not</strong> affiliated with, endorsed by, or associated with
+        Netflix, Inc. No user credentials or personal data are collected.
+      </span>
+    </div>
     <div class="main">
       <nav>
         <span
@@ -26,7 +39,7 @@
               <option value="telugu">文 Telugu</option>
             </select>
           </label>
-          <button class="btn btn-red-sm">Sign in</button>
+          <button class="btn btn-red-sm" type="button" onclick="showDemoNotice()">Sign in</button>
         </div>
       </nav>
       <div class="box"></div>
@@ -36,10 +49,10 @@
         <span>
           Ready to watch? Enter your email to start your membership.
         </span>
-        <div class="hero-buttons">
-          <input type="email" placeholder="Email Address" aria-label="Email Address" />
-          <button class="btn btn-red">Get Started &gt;</button>
-        </div>
+        <form class="hero-buttons" onsubmit="event.preventDefault(); showDemoNotice();">
+          <input type="email" placeholder="Demo email (non-functional)" aria-label="Email Address" />
+          <button type="submit" class="btn btn-red">Get Started &gt;</button>
+        </form>
       </div>
       <div class="separation"></div>
     </div>
@@ -286,40 +299,59 @@
          <span>
           Ready to watch? Enter your email to start your membership.
         </span>
-        <div class="hero-buttons">
-          <input type="email" placeholder="Email Address" aria-label="Email Address" />
-          <button class="btn btn-red">Get Started &gt;</button>
-        </div>
+        <form class="hero-buttons" onsubmit="event.preventDefault(); showDemoNotice();">
+          <input type="email" placeholder="Demo email (non-functional)" aria-label="Email Address" />
+          <button type="submit" class="btn btn-red">Get Started &gt;</button>
+        </form>
     </div>
       <div class="separation"></div>
       <footer>
-        
-        <div class="footer-item"> 
-            <a href="faq">FAQ</a>
-            <a href="faq">Investor Relations</a>
-            <a href="faq">Privacy</a>
-            <a href="faq">Speed Test</a>
+        <div class="footer-disclaimer">
+          <p>
+            <strong>Disclaimer:</strong> This website is an educational, non-commercial frontend recreation built strictly for learning and portfolio demonstration purposes. All brand names, logos, and trademarks (including Netflix) belong to their respective owners. No accounts, payments, or personal information are processed here.
+          </p>
         </div>
+        <div class="footer-links">
           <div class="footer-item"> 
-            <a href="faq">Help Center</a>
-            <a href="faq">Jobs</a>
-            <a href="faq">Cookie Preference</a>
-            <a href="faq">Legal Notices</a>
+              <a href="#faq">FAQ</a>
+              <a href="#faq">Investor Relations</a>
+              <a href="#faq">Privacy</a>
+              <a href="#faq">Speed Test</a>
+          </div>
+          <div class="footer-item"> 
+              <a href="#faq">Help Center</a>
+              <a href="#faq">Jobs</a>
+              <a href="#faq">Cookie Preference</a>
+              <a href="#faq">Legal Notices</a>
+          </div>
+          <div class="footer-item"> 
+              <a href="#faq">Account</a>
+              <a href="#faq">Ways to Watch</a>
+              <a href="#faq">Corporate Information</a>
+              <a href="#faq">Only on Netflix</a>
+          </div>
+          <div class="footer-item"> 
+              <a href="#faq">Media Centre</a>
+              <a href="#faq">Terms of Use</a>
+              <a href="#faq">Contact Us</a>
+          </div>
         </div>
-
-         <div class="footer-item"> 
-            <a href="faq">Account</a>
-            <a href="faq">Ways to Watch</a>
-            <a href="faq">Corporate Information</a>
-            <a href="faq">Only on Netflix</a>
-        </div>
-        <div class="footer-item"> 
-            <a href="faq">Media Centre</a>
-            <a href="faq">Terms of Use</a>
-            <a href="faq">Contact Us</a>
-            
-        </div>
-
       </footer>
+
+      <div id="demoToast" class="demo-toast" role="status" aria-live="polite">
+        ℹ️ Demo Clone: This is a frontend clone for portfolio demonstration. No real login or email collection exists.
+      </div>
+
+      <script>
+        let toastTimeout;
+        function showDemoNotice() {
+          const toast = document.getElementById('demoToast');
+          toast.classList.add('show');
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            toast.classList.remove('show');
+          }, 4000);
+        }
+      </script>
   </body>
 </html>
