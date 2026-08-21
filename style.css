@@ -223,26 +223,93 @@ body {
 .faqbox:focus-within svg {
   transform: rotate(90deg);
 }
-footer{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.demo-banner {
+  background: linear-gradient(90deg, #2b1d03, #473204, #2b1d03);
+  border-bottom: 1px solid #e5a00d;
+  color: #ffea9f;
+  font-size: 13px;
+  padding: 10px 16px;
+  text-align: center;
+  line-height: 1.4;
+  position: relative;
+  z-index: 100;
+}
+
+.demo-banner strong {
+  color: #ffffff;
+}
+
+footer {
   margin: auto;
   max-width: 80vw;
   color: white;
+  padding: 40px 0 60px;
 }
-.footer-item{
+
+.footer-disclaimer {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #e50914;
+  padding: 14px 18px;
+  margin: 0 34px 25px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #b3b3b3;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-item {
   display: flex;
   flex-direction: column;
   gap: 23px;
   padding: 34px;
- 
 }
-footer a{
-  color: white;
 
+footer a {
+  color: #a6a6a6;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.demo-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid #e50914;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  font-size: 14px;
+  text-align: center;
+  max-width: 90vw;
+  pointer-events: none;
+}
+
+.demo-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
+  .demo-banner {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
   .main {
     height: 80vh;
   }
@@ -315,9 +382,18 @@ footer a{
     font-size: 18px;
   }
 
-  footer {
+  .footer-disclaimer {
+    margin: 0 15px 20px;
+    font-size: 12px;
+  }
+
+  .footer-links {
     grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
     max-width: 95vw;
+    padding: 20px 0 40px;
   }
 
   .footer-item {
@@ -325,7 +401,7 @@ footer a{
     padding: 24px 15px;
   }
 }
-.lastmail{
+.lastmail {
   color: white;
   text-align: center;
   font-weight: bold;
